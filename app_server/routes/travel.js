@@ -1,7 +1,9 @@
-var express = require('express');
-var router = express.Router();
-var controller = require('../Controllers/travel');
+const express = require('express');
+const router = express.Router();
+const travelController = require('../controllers/travel');
 
-router.get('/', controller.travel);
+console.log('travelController:', travelController); 
+// Define route for fetching travel data
+router.get('/', travelController.travel);
 
 module.exports = router;
